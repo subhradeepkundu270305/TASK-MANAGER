@@ -1,16 +1,187 @@
-# React + Vite
+<div align="center">
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 📝 Task Manager – TODO LIST
+### React + Vite | Local Storage Powered
 
-Currently, two official plugins are available:
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="55"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="55"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="55"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="55"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg" height="55"/>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+</div>
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Project Overview
 
-## Expanding the ESLint configuration
+A modern **Task Manager (Todo List)** built using **React + Vite** with persistent state management via **Local Storage**.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The application allows users to manage daily tasks efficiently with real-time UI updates and persistent data storage.
+
+---
+
+## ✨ Features
+
+### 🔹 Core Functionalities
+- ➕ Add new tasks
+- ✅ Mark tasks as completed
+- ❌ Delete tasks
+- ✏ Edit existing tasks
+- 📌 View pending tasks
+- 👁 Toggle "Show Finished"
+- 🔢 Live pending task counter
+- 💾 Persistent storage using Local Storage
+
+---
+
+## 🧠 Technical Implementation
+
+### 🔹 State Management
+Uses React Hooks:
+- `useState`
+- `useEffect`
+
+```javascript
+const [todos, setTodos] = useState(() => {
+  const savedTodos = localStorage.getItem('todos')
+  return savedTodos ? JSON.parse(savedTodos) : []
+})
+```
+
+### 🔹 Local Storage Sync
+
+```javascript
+useEffect(() => {
+  localStorage.setItem('todos', JSON.stringify(todos))
+}, [todos])
+```
+
+✔ Data persists after refresh  
+✔ No backend required  
+✔ Pure frontend state persistence  
+
+---
+
+## 🖥 Interface Highlights
+
+- Clean modern purple UI
+- Responsive card-based layout
+- Separate sections:
+  - Home (Pending Tasks)
+  - My Tasks
+- Dynamic badge showing pending count
+- Background visual aesthetic
+
+---
+
+## 📂 Project Structure
+
+```
+TODO-LIST/
+│
+├── node_modules/
+├── public/
+│
+├── src/
+│   ├── assets/
+│   ├── components/
+│   │   └── Navbar.jsx
+│   │
+│   ├── App.jsx
+│   ├── App.css
+│   ├── index.css
+│   └── main.jsx
+│
+├── .gitignore
+├── bg.jpg
+├── eslint.config.js
+├── index.html
+├── package.json
+├── package-lock.json
+├── vite.config.js
+└── README.md
+```
+
+---
+
+## 🛠 Tech Stack
+
+| Technology | Role |
+|------------|------|
+| HTML5 | Structure |
+| CSS3 | Styling & Layout |
+| JavaScript (ES6+) | Logic |
+| React | UI & State Management |
+| Vite | Fast Dev Environment |
+
+---
+
+## ⚙️ Installation & Setup
+
+Clone the repository:
+
+```bash
+git clone https://github.com/subhradeepkundu270305/TODO-LIST.git
+```
+
+Navigate into project:
+
+```bash
+cd TODO-LIST
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start development server:
+
+```bash
+npm run dev
+```
+
+Vite runs at:
+
+```
+http://localhost:5173/
+```
+
+---
+
+## 🎯 What This Project Demonstrates
+
+✔ Strong understanding of React Hooks  
+✔ Functional component architecture  
+✔ Controlled inputs  
+✔ Conditional rendering  
+✔ Derived state (pendingCount)  
+✔ Persistent storage integration  
+✔ Clean UI structuring  
+
+---
+
+## 📈 Future Improvements
+
+- Drag & drop task reordering
+- Due dates & priorities
+- Dark/Light mode toggle
+- Backend integration (MongoDB / Firebase)
+- Authentication system
+
+---
+
+## 👨‍💻 Author
+
+**Subhradeep Kundu**  
+CSE Student | Full Stack Developer | Building strong frontend foundations  
+
+---
+
+<div align="center">
+
+### 💡 "Consistency in small projects builds scalable engineers."
+
+</div>
