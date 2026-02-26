@@ -122,7 +122,7 @@ TODO-LIST/
 Clone the repository:
 
 ```bash
-git clone https://github.com/subhradeepkundu270305/TODO-LIST.git
+git clone https://github.com/subhradeepkundu270305/TASK-MANAGER.git
 ```
 
 Navigate into project:
