@@ -128,7 +128,7 @@ git clone https://github.com/subhradeepkundu270305/TASK-MANAGER.git
 Navigate into project:
 
 ```bash
-cd TODO-LIST
+cd TASK-MANAGER
 ```
 
 Install dependencies:
